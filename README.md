@@ -1,2 +1,2 @@
 # Dotfiles
-Configuration files of various progams I use. 
+Configuration files for various programs I use. Nothing flashy.
