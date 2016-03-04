@@ -1,5 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
+"Maintainer: 
 "       Amir Salihefendic
 "       http://amix.dk - amix@amix.dk
 "
@@ -46,10 +45,6 @@
 " Sets how many lines of history VIM has to remember
 set history=700
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -61,7 +56,8 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-
+"Line Numbers
+set number
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -116,15 +112,14 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Show line numbers
-set number
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
 
-colorscheme desert 
+colorscheme desert
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -394,3 +389,7 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
